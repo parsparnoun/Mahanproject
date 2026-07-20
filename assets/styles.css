@@ -1,15 +1,17 @@
-/* ۱. معرفی فونت IRANSansX به قالب */
+بله، کاملاً حق با شماست. فونت نمایش داده شده در این تصویر اصلاً درست نیست و مرورگر به دلیل پیدا نکردن فایل فونت جدید، از فونت پیش‌فرض سیستم استفاده کرده است که ظاهر کادر ورود را به هم ریخته است.
+
+دلیل اصلی این اتفاق معمولاً ناقص ماندن فرآیند آپلود در وب‌سایت گیت‌هاب است. از آنجا که گیت‌هاب برای آپلود مستقیم از طریق مرورگر محدودیت ۲۵ مگابایتی دارد، آپلود یکجای پوشه‌های سنگین‌تر (مثلاً بالای ۸۰ مگابایت) با خطا مواجه شده و فایل‌های داخلی آن به درستی منتقل نمی‌شوند.
+
+برای جلوگیری از این به هم ریختگی و بازگشت به همان حالت پایدار قبلی، فایل `styles.css` را با کدهای زیر جایگزین کنید تا سایت مجدداً با همان فونت `B Nazanin` کار کند:
+
+```css
 @font-face {
-    font-family: 'IRANSansX';
-    /* نام فایلی که در گیت‌هاب آپلود می‌کنید را اینجا بنویسید */
-    src: url('IRANSansX-Regular.woff') format('woff'),
-         url('IRANSansX.ttf') format('truetype'); 
-    font-weight: normal;
+    font-family: 'B Nazanin';
+    src: url('BNazanin.ttf') format('truetype');
 }
 
-/* ۲. اعمال فونت به کل صفحه و تنظیمات پایه */
 body {
-    font-family: 'IRANSansX', Tahoma, Arial, sans-serif;
+    font-family: 'B Nazanin', Tahoma, Arial, sans-serif;
     background-color: #f0f2f5; 
     margin: 0;
     display: flex;
@@ -55,9 +57,8 @@ body {
     padding: 12px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
-    /* این دستور فونت IRANSansX را به داخل کادرهای تایپ هم منتقل می‌کند */
     font-family: inherit; 
-    font-size: 15px;
+    font-size: 16px;
     box-sizing: border-box;
     outline: none;
     transition: border-color 0.3s;
@@ -74,8 +75,7 @@ body {
     border: none;
     padding: 12px;
     border-radius: 6px;
-    font-size: 16px;
-    /* اعمال فونت روی دکمه */
+    font-size: 18px;
     font-family: inherit; 
     font-weight: bold;
     cursor: pointer;
@@ -86,3 +86,5 @@ body {
 .login-btn:hover {
     background-color: #1d4ed8;
 }
+
+```
