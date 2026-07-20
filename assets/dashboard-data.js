@@ -1,6 +1,6 @@
 window.DASHBOARD_DATA = {
   "settings": { 
-    "dashboard_title": "داشبورد مدیریتی فروشگاه شهروند ماهان کرج",
+    "dashboard_title": "موضوع: خرید خدمات مشاوره طراحی معماری پروژه فروشگاه شهروند ماهان کرج",
     "organization_name": "مهندسان مشاور پارس پرنون",
     "updated_at": "تیر ۱۴۰۵"
   },
@@ -8,7 +8,7 @@ window.DASHBOARD_DATA = {
     {
       "page_id": "design",
       "title": "طراحی",
-      "subtitle": "مدیریت اسناد، مطالعات و نقشه‌های طراحی",
+      "subtitle": "مدیریت اسناد و نقشه‌های طراحی",
       "icon": "briefcase-business",
       "order": 1,
       "sections": [
