@@ -68,7 +68,7 @@ h1,h2,h3,p{margin:0}
 .hero-banner {
     position: relative;
     width: 100%;
-    height: 220px;
+    /* محدودیت ارتفاع (220px) حذف شد تا کادر به اندازه عکس باز شود */
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -77,8 +77,8 @@ h1,h2,h3,p{margin:0}
 
 .hero-banner img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* تغییر به اتوماتیک برای نمایش کامل تمام جزئیات عکس */
+    display: block; /* برای جلوگیری از ایجاد فضای خالی اضافه در زیر عکس */
 }
 
 /* هاله رنگی روی عکس */
