@@ -60,7 +60,7 @@
     const content = `
       <section class="hero">
         <div>
-          <h2>فهرست گزارش‌های مدیریتی</h2>
+          <h2>فهرست</h2>
         </div>
       </section>
       <section class="menu-grid">${cards}</section>`;
