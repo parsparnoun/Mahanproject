@@ -27,7 +27,7 @@ window.DASHBOARD_DATA = {
           "attachments": [
             { "title": "معماری", "description": "نقشه‌های مقدماتی و رندرهای اولیه سه بعدی", "file_name": "assets/Architecture_Pre.rar" },
             { "title": "سازه", "description": "نقشه‌های مقدماتی سازه", "file_name": "assets/Structure_Pre.rar" },
-            { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی، دفترچه محاسبات", "file_name": "assets/M&E_Pre.rar" }
+            { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی", "file_name": "assets/M&E_Pre.rar" }
           ]
         },
         
