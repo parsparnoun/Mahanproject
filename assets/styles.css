@@ -67,7 +67,7 @@ h1,h2,h3,p{margin:0}
 /* استایل تصویر هدر (بنر) */
 .hero-banner {
     position: relative;
-    width: 70%; /* عرض کادر ۳۰ درصد کوچکتر شد */
+    width: 80%; /* عرض کادر 20 درصد کوچکتر شد */
     margin: 0 auto 30px auto; /* این خط باعث می‌شود عکس در وسط صفحه قرار بگیرد */
     border-radius: 20px;
     overflow: hidden;
