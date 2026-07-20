@@ -67,11 +67,10 @@ h1,h2,h3,p{margin:0}
 /* استایل تصویر هدر (بنر) */
 .hero-banner {
     position: relative;
-    width: 100%;
-    /* محدودیت ارتفاع (220px) حذف شد تا کادر به اندازه عکس باز شود */
+    width: 70%; /* عرض کادر ۳۰ درصد کوچکتر شد */
+    margin: 0 auto 30px auto; /* این خط باعث می‌شود عکس در وسط صفحه قرار بگیرد */
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 30px;
     box-shadow: 0 15px 35px rgba(36, 94, 234, 0.15);
 }
 
