@@ -44,7 +44,6 @@
           <main class="main">
             ${content}
           </main>
-          <!-- متن فوتر در خط زیر حذف شد -->
           <footer class="footer">${esc(data.settings.version || "")}</footer>
         </div>
       </div>`;
@@ -53,18 +52,31 @@
   function renderMenu() {
     const cards = [...data.pages].sort((a,b) => a.order-b.order).map(p => `
       <button class="menu-card" data-page="${esc(p.page_id)}">
-        <div class="menu-icon">${icon(p.icon)}</div>
-        <h3>${esc(p.title)}</h3>
-        <p>${esc(p.subtitle)}</p>
-        <span class="card-arrow">←</span>
+        <div class="menu-icon-wrapper">
+            <div class="menu-icon">${icon(p.icon)}</div>
+        </div>
+        <div class="card-content">
+            <h3>${esc(p.title)}</h3>
+            <p>${esc(p.subtitle)}</p>
+        </div>
+        <span class="card-arrow">ورود به بخش ←</span>
       </button>`).join("");
+      
     const content = `
       <section class="hero">
         <div>
-          <h2>فهرست:</h2>
+          <h2>فهرست بخش‌ها</h2>
+          <p style="color: var(--muted); font-size: 14px; margin-top: 8px;">لطفاً برای مشاهده اسناد و گزارش‌ها، بخش مورد نظر را انتخاب کنید.</p>
         </div>
       </section>
+      
+      <div class="hero-banner">
+         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="نمای ساختمان">
+         <div class="banner-overlay"></div>
+      </div>
+
       <section class="menu-grid">${cards}</section>`;
+      
     app.innerHTML = shell(content);
     app.querySelectorAll("[data-page]").forEach(btn => btn.addEventListener("click", () => {
       currentPage = btn.dataset.page;
@@ -180,7 +192,6 @@
       `).join("")}
     </div>`;
 }
-  
   
   function renderMap(layers=[]) {
     if(!layers.length) return "";
