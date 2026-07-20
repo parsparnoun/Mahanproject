@@ -71,7 +71,7 @@
       </section>
       
       <div class="hero-banner">
-         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="نمای ساختمان">
+         <img src="assets/jeld-picture.jpg" alt="نمای پروژه شهروند ماهان">
          <div class="banner-overlay"></div>
       </div>
 
