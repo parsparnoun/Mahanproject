@@ -70,8 +70,8 @@ h1,h2,h3,p{margin:0}
 }
 .menu-card:hover{transform:translateY(-4px);box-shadow:0 14px 24px rgba(30,58,95,.12);border-color:#b5c8e5}
 .menu-icon{font-size:28px;margin-bottom:15px}
-.menu-card h3{font-size:18px}
-.menu-card p{font-size:13px;color:var(--muted);line-height:1.9;margin-top:10px}
+.menu-card h3{font-size:20px}
+.menu-card p{font-size:16px;color:var(--muted);line-height:1.9;margin-top:10px}
 .card-arrow{position:absolute;left:18px;bottom:18px;color:var(--primary);font-size:21px}
 .report-head{
   display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
