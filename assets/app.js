@@ -32,7 +32,7 @@
             <div class="topbar-title">
               <div class="logo">◆</div>
               <div>
-                <h1>${esc(data.settings.dashboard_title || "داشبورد مدیریتی پارس پرنون")}</h1>
+                <h1>${esc(data.settings.dashboard_title || "داشبورد مدیریتی")}</h1>
                 <div class="subtitle">${esc(data.settings.organization_name || "")} | ${esc(data.settings.updated_at || "")}</div>
               </div>
             </div>
@@ -44,7 +44,8 @@
           <main class="main">
             ${content}
           </main>
-          <footer class="footer">${esc(data.settings.version || "")} — فایل داده: excel-data/dashboard-master.xlsx</footer>
+          <!-- متن فوتر در خط زیر حذف شد -->
+          <footer class="footer">${esc(data.settings.version || "")}</footer>
         </div>
       </div>`;
   }
