@@ -1,111 +1,73 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>داشبورد مدیریتی پارس پرنون</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <style>
-    /* ۱. اضافه کردن فونت B Nazanin */
-    @font-face {
-        font-family: 'B Nazanin';
-        src: url('assets/BNazanin.ttf') format('truetype');
-        font-weight: normal;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داشبورد مدیریتی پارس پرنون</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    /* ۱. اضافه کردن فونت B Nazanin */
+    @font-face {
+        font-family: 'B Nazanin';
+        src: url('assets/BNazanin.ttf') format('truetype');
+        font-weight: normal;
+    }
 
-    /* اعمال فونت به کل صفحه */
-    body {
-        font-family: 'B Nazanin', Tahoma, Arial, sans-serif;
-        margin: 0;
-        background: #f4f6f8;
-    }
+    /* اعمال فونت به کل صفحه */
+    body {
+        font-family: 'B Nazanin', Tahoma, Arial, sans-serif;
+    }
 
-    /* استایل‌های پایه برای صفحه ورود */
-    #login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f2f5; display: flex; justify-content: center; align-items: center; z-index: 9999; }
-    .login-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; width: 320px; }
-    
-    /* استایل لوگوی صفحه ورود */
-    .company-logo { max-width: 120px; height: auto; display: block; margin: 0 auto 15px auto; }
+    /* استایل‌های پایه برای ورود */
+    #login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f2f5; display: flex; justify-content: center; align-items: center; z-index: 9999; }
+    .login-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; width: 320px; }
+    
+    /* ۲. استایل مخصوص لوگوی شرکت */
+    .company-logo { width: 80px; height: auto; display: block; margin: 0 auto 15px auto; }
 
-    .login-box h2 { margin-bottom: 20px; color: #1e293b; }
-    
-    /* استایل فیلدها و دکمه با فونت جدید */
-    .login-box input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 15px; outline: none; }
-    .login-box input:focus { border-color: #000000; }
-    .login-box button { width: 100%; padding: 12px; background: #245eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: inherit; font-size: 16px; transition: background-color 0.3s; }
-    .login-box button:hover { background: #1d4ed8; }
-    
-    /* مخفی بودن اولیه محیط داشبورد */
-    #app-wrapper { display: none; padding: 20px; }
-
-    /* ۲. استایل‌های بنر بالای داشبورد (که اطلاعات و لوگو در آن قرار می‌گیرد) */
-    .header-box { text-align: center; background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .header-logo { max-width: 250px; height: auto; margin-bottom: 15px; }
-  </style>
+    .login-box h2 { margin-bottom: 20px; color: #1e293b; }
+    
+    /* استایل فیلدها و دکمه با فونت جدید */
+    .login-box input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 15px; outline: none; }
+    .login-box input:focus { border-color: #000000; }
+    .login-box button { width: 100%; padding: 12px; background: #245eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: inherit; font-size: 16px; transition: background-color 0.3s; }
+    .login-box button:hover { background: #1d4ed8; }
+    
+    #app-wrapper { display: none; }
+  </style>
 </head>
 <body>
 
-  <!-- صفحه ورود (لاگین) -->
-  <div id="login-overlay">
-    <div class="login-box">
-      <!-- به این img یک آیدی دادیم تا مسیر عکس را با جاوا اسکریپت آپدیت کنیم -->
-      <img src="assets/logo.jpg" id="login-logo" alt="آرم شرکت" class="company-logo">
-      
-      <h2>ورود به سامانه</h2>
-      <input type="text" id="username" placeholder="نام کاربری" />
-      <input type="password" id="password" placeholder="رمز عبور" />
-      <button onclick="checkLogin()">ورود</button>
-    </div>
-  </div>
+  <div id="login-overlay">
+    <div class="login-box">
+      <!-- فراخوانی لوگو دقیقاً بالای عنوان -->
+      <img src="assets/logo.jpg" alt="آرم شرکت" class="company-logo">
+      
+      <h2>ورود به سامانه</h2>
+      <input type="text" id="username" placeholder="نام کاربری" />
+      <input type="password" id="password" placeholder="رمز عبور" />
+      <button onclick="checkLogin()">ورود</button>
+    </div>
+  </div>
 
-  <!-- محیط داشبورد (بعد از ورود نمایش داده می‌شود) -->
-  <div id="app-wrapper">
-    
-    <!-- بنر بالای داشبورد که اطلاعات را از فایل می‌خواند -->
-    <div id="top-banner" class="header-box"></div>
-    
-    <div id="app"></div>
-  </div>
+  <div id="app-wrapper">
+    <div id="app"></div>
+  </div>
 
-  <!-- بارگذاری فایل‌های جاوا اسکریپت شما -->
-  <script src="assets/dashboard-data.js"></script>
-  <script src="assets/app.js"></script>
-
-  <!-- کدهای مدیریت ورود و نمایش اطلاعات در بنر -->
-  <script>
-    // تابع لاگین شما
-    function checkLogin() {
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
-      
-      if (user === "mahanproject" && pass === "parnoun135") {
-        document.getElementById('login-overlay').style.display = 'none';
-        document.getElementById('app-wrapper').style.display = 'block';
-      } else {
-        alert("نام کاربری یا رمز عبور اشتباه است");
-      }
-    }
-
-    // این بخش اطلاعات را از فایل dashboard-data.js می‌خواند و در صفحه قرار می‌دهد
-    window.onload = function() {
-      if(window.DASHBOARD_DATA && window.DASHBOARD_DATA.settings) {
-        const settings = window.DASHBOARD_DATA.settings;
-        
-        // ۱. قرار دادن عکس و متون در بنر بالای داشبورد
-        const banner = document.getElementById('top-banner');
-        banner.innerHTML = `
-          <img src="${settings.logo_url}" alt="لوگوی شرکت" class="header-logo">
-          <h2>${settings.dashboard_title}</h2>
-          <p><strong>سازمان:</strong> ${settings.organization_name} | <strong>تاریخ به‌روزرسانی:</strong> ${settings.updated_at}</p>
-        `;
-
-        // ۲. اصلاح مسیر لوگوی صفحه ورود (اختیاری اما کاربردی: تا با لوگوی اصلی یکی باشد)
-        const loginLogo = document.getElementById('login-logo');
-        if(loginLogo) {
-          loginLogo.src = settings.logo_url;
-        }
-      }
-    };
-  </script>
+  <script src="assets/dashboard-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    function checkLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      
+      if (user === "mahanproject" && pass === "parnoun135") {
+        document.getElementById('login-overlay').style.display = 'none';
+        document.getElementById('app-wrapper').style.display = 'block';
+      } else {
+        alert("نام کاربری یا رمز عبور اشتباه است");
+      }
+    }
+  </script>
 </body>
 </html>
