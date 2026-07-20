@@ -63,16 +63,109 @@ h1,h2,h3,p{margin:0}
 }
 .hero h2{font-size:23px}
 .hero p{color:var(--muted);font-size:14px;margin-top:8px;line-height:1.8}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.menu-card{
-  position:relative;min-height:156px;background:linear-gradient(180deg,#fff,#fbfdff);
-  border:1px solid var(--line);border-radius:16px;padding:20px;transition:.22s ease;text-align:right
+
+/* استایل تصویر هدر (بنر) */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(36, 94, 234, 0.15);
 }
-.menu-card:hover{transform:translateY(-4px);box-shadow:0 14px 24px rgba(30,58,95,.12);border-color:#b5c8e5}
-.menu-icon{font-size:28px;margin-bottom:15px}
-.menu-card h3{font-size:20px}
-.menu-card p{font-size:16px;color:var(--muted);line-height:1.9;margin-top:10px}
-.card-arrow{position:absolute;left:18px;bottom:18px;color:var(--primary);font-size:21px}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* هاله رنگی روی عکس */
+.banner-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(30, 58, 95, 0.4), transparent);
+}
+
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+
+/* تغییرات جدید کارت‌های فهرست */
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease forwards;
+    text-align: right;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(36, 94, 234, 0.12);
+    border-color: #dbe5ef;
+}
+
+.menu-icon-wrapper {
+    background: var(--panel-soft);
+    padding: 15px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.menu-icon {
+    font-size: 32px;
+    margin: 0;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.card-arrow {
+    position: static;
+    margin-top: 25px;
+    display: inline-block;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 15px;
+    background: rgba(36, 94, 234, 0.05);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.menu-card:hover .card-arrow {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .report-head{
   display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
   padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:16px
