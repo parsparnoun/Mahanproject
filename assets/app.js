@@ -32,7 +32,7 @@
             <div class="topbar-title">
               <div class="logo">◆</div>
               <div>
-                <h1>${esc(data.settings.dashboard_title || "داشبورد مدیریتی")}</h1>
+                <h1>${esc(data.settings.dashboard_title || "داشبورد مدیریتی پارس پرنون")}</h1>
                 <div class="subtitle">${esc(data.settings.organization_name || "")} | ${esc(data.settings.updated_at || "")}</div>
               </div>
             </div>
