@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دریافت فایل - پارس پرنون</title>
+  <style>
+    @font-face {
+        font-family: 'B Nazanin';
+        src: url('assets/BNazanin.ttf') format('truetype');
+        font-weight: normal;
+    }
+    body {
+        font-family: 'B Nazanin', Tahoma, Arial, sans-serif;
+        background: #f0f2f5;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .box {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        text-align: center;
+        width: 320px;
+    }
+    .company-logo { width: 80px; height: auto; display: block; margin: 0 auto 15px auto; }
+    .box h2 { margin-bottom: 20px; color: #1e293b; }
+    .box input {
+        width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e1;
+        border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 15px; outline: none;
+    }
+    .box input:focus { border-color: #000000; }
+    .btn {
+        width: 100%; padding: 12px; background: #245eea; color: white; border: none;
+        border-radius: 6px; cursor: pointer; font-weight: bold; font-family: inherit; font-size: 16px; transition: 0.3s;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .download-btn { background: #13b98a; margin-top: 10px; }
+    .download-btn:hover { background: #0fa379; }
+    #download-section { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- فرم ورود صوری -->
+  <div id="login-section" class="box">
+    <img src="assets/logo.jpg" alt="آرم شرکت" class="company-logo">
+    <h2>ورود جهت دریافت فایل</h2>
+    <input type="text" id="username" placeholder="نام کاربری" />
+    <input type="password" id="password" placeholder="رمز عبور" />
+    <button class="btn" onclick="checkLogin()">ورود</button>
+  </div>
+
+  <!-- بخش دانلود که نام فایل در آن تغییر می‌کند -->
+  <div id="download-section" class="box">
+    <img src="assets/logo.jpg" alt="آرم شرکت" class="company-logo">
+    <h2 style="margin-bottom: 5px;">تایید هویت موفق</h2>
+    <p style="color: #64748b; font-size: 14px; margin-bottom: 25px;">
+       فایل <strong id="display-name" style="color:#1e293b;">...</strong> آماده دریافت است.
+    </p>
+    
+    <a id="dl-link" href="#" style="text-decoration: none;" target="_blank">
+        <button class="btn download-btn">📥 دانلود فایل</button>
+    </a>
+  </div>
+
+  <script>
+    // خواندن اسم و آدرس فایل از لینک ارسالی
+    const params = new URLSearchParams(window.location.search);
+    const fileName = params.get('name') || 'درخواستی';
+    const fileUrl = params.get('url') || '#';
+
+    // قرار دادن اسم و لینک در دکمه دانلود
+    document.getElementById('display-name').innerText = fileName;
+    document.getElementById('dl-link').href = fileUrl;
+
+    function checkLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      
+      if (user === "mahanproject" && pass === "parnoun135") {
+        if(fileUrl === '#') {
+            alert("لینک دانلود معتبر نیست. لطفا از لینک اصلی وارد شوید.");
+            return;
+        }
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('download-section').style.display = 'block';
+      } else {
+        alert("نام کاربری یا رمز عبور اشتباه است");
+      }
+    }
+  </script>
+
+</body>
+</html>

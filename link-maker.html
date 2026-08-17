@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لینک‌ساز هوشمند پارس پرنون</title>
+  <style>
+    @font-face {
+        font-family: 'B Nazanin';
+        src: url('assets/BNazanin.ttf') format('truetype');
+        font-weight: normal;
+    }
+    body { font-family: 'B Nazanin', Tahoma, Arial; background: #eef3f8; padding: 40px; display: flex; justify-content: center; }
+    .panel { background: white; padding: 30px; border-radius: 12px; width: 450px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    h2 { color: #1e293b; margin-top: 0; text-align: center; font-family: Tahoma; font-size: 20px;}
+    label { font-size: 15px; color: #475569; font-weight: bold; display: block; margin: 15px 0 8px; font-family: Tahoma; }
+    
+    select, input { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-family: Tahoma; font-size: 14px; outline: none; }
+    select:focus, input:focus { border-color: #245eea; }
+    
+    button { width: 100%; padding: 12px; margin-top: 25px; background: #245eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Tahoma; font-size: 15px; transition: 0.3s; }
+    button:hover { background: #1d4ed8; }
+    
+    .result-box { margin-top: 20px; padding: 15px; background: #f8fbff; border: 1px dashed #245eea; border-radius: 6px; display: none; }
+    textarea { width: 100%; height: 90px; margin-top: 10px; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px; box-sizing: border-box; direction: ltr; resize: none; font-family: monospace; font-size: 13px; outline: none; }
+  </style>
+
+  <!-- فراخوانی دیتابیس شما به صورت مستقیم -->
+  <script src="assets/dashboard-data.js"></script>
+</head>
+<body>
+
+  <div class="panel">
+    <h2>ساخت لینک دانلود (مستقیم از دیتابیس)</h2>
+    
+    <label>۱. فایل مورد نظر را از لیست انتخاب کنید:</label>
+    <select id="fileSelector">
+        <option value="">-- لطفاً یک فایل را انتخاب کنید --</option>
+    </select>
+
+    <label>۲. عنوانی که می‌خواهید مشتری ببیند (اختیاری):</label>
+    <input type="text" id="customName" placeholder="مثال: فایل نهایی - در صورت خالی بودن، اسم اصلی فایل درج می‌شود" />
+
+    <button onclick="generateLink()">تولید لینک نهایی برای مشتری</button>
+
+    <div class="result-box" id="resultBox">
+      <label style="color:#245eea;">لینک زیر را کپی کرده و برای شخص بفرستید:</label>
+      <textarea id="finalLink" readonly onclick="this.select()"></textarea>
+    </div>
+  </div>
+
+  <script>
+    // زمانی که صفحه باز می‌شود، فایل‌ها را از دیتابیس خوانده و در لیست قرار می‌دهد
+    window.onload = function() {
+        const select = document.getElementById('fileSelector');
+        const data = window.DASHBOARD_DATA;
+        
+        if(!data) {
+            alert("خطا: فایل دیتابیس (dashboard-data.js) پیدا نشد!");
+            return;
+        }
+
+        // جستجو در تمام صفحات، بخش‌ها و فایل‌های پیوست شده
+        data.pages.forEach(page => {
+            const optgroup = document.createElement('optgroup');
+            optgroup.label = "بخش: " + page.title; // مثلا: بخش طراحی یا نظارت
+            
+            page.sections.forEach(section => {
+                if(section.attachments && section.attachments.length > 0) {
+                    section.attachments.forEach(att => {
+                        const option = document.createElement('option');
+                        // ذخیره همزمان اسم و آدرس فایل در گزینه انتخاب شده
+                        option.value = JSON.stringify({ name: att.title, url: att.file_name });
+                        option.text = `${section.title} ⬅️ ${att.title}`; // مثلا: 2- مطالعات مرحله اول ⬅️ معماری
+                        optgroup.appendChild(option);
+                    });
+                }
+            });
+            
+            if(optgroup.children.length > 0) {
+                select.appendChild(optgroup);
+            }
+        });
+    };
+
+    function generateLink() {
+      const selector = document.getElementById('fileSelector');
+      const selectedValue = selector.value;
+      const customName = document.getElementById('customName').value;
+      
+      if(!selectedValue) {
+          alert("لطفا ابتدا یک فایل را از منوی کشویی انتخاب کنید.");
+          return;
+      }
+
+      // استخراج اطلاعات فایلی که مدیر انتخاب کرده
+      const fileData = JSON.parse(selectedValue);
+      const finalName = customName.trim() !== "" ? customName : fileData.name;
+      let finalUrl = fileData.url;
+
+      // یک قابلیت هوشمند: اگر لینک از نوع پیش‌نمایش گوگل درایو بود، خودکار آن را به لینک دانلود مستقیم تبدیل می‌کند
+      if(finalUrl.includes('drive.google.com/file/d/')) {
+          const match = finalUrl.match(/\/d\/(.+?)\//);
+          if(match && match[1]) {
+              finalUrl = `https://drive.google.com/uc?export=download&id=${match[1]}`;
+          }
+      }
+
+      // آدرس صفحه دانلود شما
+      const baseUrl = "https://mahdiyar1889.github.io/Mahanproject/download.html";
+      
+      // ساخت لینک نهایی
+      const generatedLink = `${baseUrl}?name=${encodeURIComponent(finalName)}&url=${encodeURIComponent(finalUrl)}`;
+      
+      document.getElementById('resultBox').style.display = 'block';
+      document.getElementById('finalLink').value = generatedLink;
+    }
+  </script>
+
+</body>
+</html>
