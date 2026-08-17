@@ -37,17 +37,17 @@ window.DASHBOARD_DATA = {
             { 
               "title": "معماری", 
               "description": "نقشه‌های نهایی معماری و رندرهای نهایی سه بعدی", 
-              "file_name": "https://app.fazabox.com/u/e9f5cdb7fe" 
+              "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
             },
             { 
               "title": "سازه", 
               "description": "نقشه‌های نهایی سازه، دفترچه محاسبات و آزمایش ژئوتکنیک", 
-              "file_name": "https://app.fazabox.com/u/72cfe741fa" 
+              "file_name": "https://drive.google.com/file/d/1t8PN1pNt2CcNaeLCYuuIwSf2zmuN9ytX/view?usp=sharing" 
             },
             { 
               "title": "تاسیسات", 
               "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", 
-              "file_name": "https://app.fazabox.com/u/e90c29b6f3" 
+              "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
             }
           ]
         },
