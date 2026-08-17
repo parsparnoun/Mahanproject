@@ -16,7 +16,7 @@ window.DASHBOARD_DATA = {
           "section_id": "s1",
           "title": "1- شرح خدمات مطالعات",
           "attachments": [
-            { "title": "شرح خدمات قرارداد طراحی", "file_name": "https://app.fazabox.com/u/440ba81546" }
+            { "title": "شرح خدمات قرارداد طراحی", "file_name": "https://drive.google.com/file/d/1YLr-sjkWz-akPn_m4jVVHVkE3lFRUQFP/view?usp=sharing" }
           ]
         },
         
