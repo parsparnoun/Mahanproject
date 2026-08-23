@@ -68,10 +68,10 @@ window.DASHBOARD_DATA = {
         },
         {
           "section_id": "s5",
-          "title": "5- تمامی اسناد و براورد مناقصه",
+          "title": "5- تمامی اسناد و برآورد مناقصه",
           "attachments": [
             { 
-              "title": "اسناد و براورد مناقصه", 
+              "title": "مجموعه اسناد و برآورد مناقصه", 
               "description": "دانلود تمامی اسناد", 
               "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
              }
