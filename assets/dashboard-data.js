@@ -36,22 +36,22 @@ window.DASHBOARD_DATA = {
             { 
               "title": "معماری", 
               "description": "نقشه‌های نهایی معماری و رندرهای نهایی سه بعدی", 
-              "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
+              "file_name": "https://drive.google.com/file/d/1eWMd3AEyOe778vBYQMJbZvSt2zrsD9BE/view?usp=sharing" 
             },
             { 
               "title": "سازه", 
               "description": "نقشه‌های نهایی سازه، دفترچه محاسبات و آزمایش ژئوتکنیک", 
-              "file_name": "https://drive.google.com/file/d/1t8PN1pNt2CcNaeLCYuuIwSf2zmuN9ytX/view?usp=sharing" 
+              "file_name": "https://drive.google.com/file/d/1BnmV4CfFkiBdEIZQPNJLEFrm5yxO-soG/view?usp=sharing" 
             },
             { 
               "title": "تاسیسات مکانیکی", 
               "description": "نقشه‌های نهایی تاسیسات مکانیکی، دفترچه محاسبات", 
-              "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
+              "file_name": "https://drive.google.com/file/d/13cFY2tuLH-qqCec2im0Bp3sSZPHuuS1f/view?usp=sharing" 
             },
             { 
               "title": "تاسیسات برقی", 
               "description": "نقشه‌های نهایی تاسیسات برقی، دفترچه محاسبات", 
-              "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
+              "file_name": "https://drive.google.com/file/d/1G5gpCmzKFU03XCKUJ6d3b3Iq2gUmc5xX/view?usp=sharing" 
             }
           ]
         },
@@ -62,7 +62,7 @@ window.DASHBOARD_DATA = {
             { 
               "title": "برنامه زمانبندی اجرا", 
               "description": "فایل برنامه زمانبندی", 
-              "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
+              "file_name": "https://drive.google.com/file/d/1IPfNTJ-2VKkQKYh8AvuuMvNKUFvUIDju/view?usp=sharing" 
              }
           ]
         },
@@ -73,7 +73,7 @@ window.DASHBOARD_DATA = {
             { 
               "title": "مجموعه اسناد و برآورد مناقصه", 
               "description": "دانلود تمامی اسناد", 
-              "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
+              "file_name": "https://drive.google.com/file/d/1PrI13a_UZweHKiMaZwOWOu3ot52UgJpa/view?usp=sharing" 
              }
           ]
         }
