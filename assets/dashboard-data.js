@@ -2,7 +2,7 @@ window.DASHBOARD_DATA = {
   "settings": { 
     "dashboard_title": "موضوع: خرید خدمات مشاوره طراحی معماری پروژه فروشگاه شهروند ماهان کرج",
     "organization_name": "مهندسان مشاور پارس پرنون",
-    "updated_at": "تیرماه ۱۴۰۵"
+    "updated_at": "شهریورماه ۱۴۰۵"
   },
   "pages": [
     {
@@ -26,7 +26,8 @@ window.DASHBOARD_DATA = {
           "attachments": [
             { "title": "معماری", "description": "نقشه‌های مقدماتی و رندرهای اولیه سه بعدی", "file_name": "assets/Architecture_Pre.rar" },
             { "title": "سازه", "description": "نقشه‌های مقدماتی سازه", "file_name": "assets/Structure_Pre.rar" },
-            { "title": "تاسیسات", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی و برقی", "file_name": "assets/M&E_Pre.rar" }
+            { "title": "تاسیسات مکانیکی", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی", "file_name": "assets/M&E_Pre.rar" }
+            { "title": "تاسیسات برقی", "description": "نقشه‌های مقدماتی تاسیسات برقی", "file_name": "assets/M&E_Pre.rar" }
           ]
         },
         
@@ -45,8 +46,13 @@ window.DASHBOARD_DATA = {
               "file_name": "https://drive.google.com/file/d/1t8PN1pNt2CcNaeLCYuuIwSf2zmuN9ytX/view?usp=sharing" 
             },
             { 
-              "title": "تاسیسات", 
-              "description": "نقشه‌های نهایی تاسیسات مکانیکی و برقی، دفترچه محاسبات", 
+              "title": "تاسیسات مکانیکی", 
+              "description": "نقشه‌های نهایی تاسیسات مکانیکی، دفترچه محاسبات", 
+              "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
+            }
+                { 
+              "title": "تاسیسات برقی", 
+              "description": "نقشه‌های نهایی تاسیسات برقی، دفترچه محاسبات", 
               "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
             }
           ]
@@ -54,10 +60,23 @@ window.DASHBOARD_DATA = {
 
         {
           "section_id": "s4",
-          "title": "4- برآورد و اسناد مناقصه",
-          "attachments": [{ "title": "دانلود اسناد مناقصه و برآورد", "file_name": "assets/Tender.rar" }]
-        }
-      ]
+          "title": "4- برنامه زمانبندی",
+           "attachments": [
+            { 
+              "title": "برنامه زمانبندی اجرا", 
+              "description": "فایل برنامه زمانبندی", 
+              "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
+             }
+          ]
+       "section_id": "s5",
+          "title": "4- تمامی اسناد و براورد مناقصه",
+           "attachments": [
+            { 
+              "title": "اسناد و براورد مناقصه", 
+              "description": "دانلود تمامی اسناد", 
+              "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
+             }
+          ]
     },
     {
       "page_id": "supervision",
