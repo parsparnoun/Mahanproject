@@ -19,18 +19,16 @@ window.DASHBOARD_DATA = {
             { "title": "شرح خدمات قرارداد طراحی", "file_name": "https://drive.google.com/file/d/1YLr-sjkWz-akPn_m4jVVHVkE3lFRUQFP/view?usp=sharing" }
           ]
         },
-        
         {
           "section_id": "s2",
           "title": "2- مطالعات مرحله اول",
           "attachments": [
             { "title": "معماری", "description": "نقشه‌های مقدماتی و رندرهای اولیه سه بعدی", "file_name": "assets/Architecture_Pre.rar" },
             { "title": "سازه", "description": "نقشه‌های مقدماتی سازه", "file_name": "assets/Structure_Pre.rar" },
-            { "title": "تاسیسات مکانیکی", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی", "file_name": "assets/M&E_Pre.rar" }
+            { "title": "تاسیسات مکانیکی", "description": "نقشه‌های مقدماتی تاسیسات مکانیکی", "file_name": "assets/M&E_Pre.rar" },
             { "title": "تاسیسات برقی", "description": "نقشه‌های مقدماتی تاسیسات برقی", "file_name": "assets/M&E_Pre.rar" }
           ]
         },
-        
         {
           "section_id": "s3",
           "title": "3- مطالعات مرحله دوم",
@@ -49,34 +47,37 @@ window.DASHBOARD_DATA = {
               "title": "تاسیسات مکانیکی", 
               "description": "نقشه‌های نهایی تاسیسات مکانیکی، دفترچه محاسبات", 
               "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
-            }
-                { 
+            },
+            { 
               "title": "تاسیسات برقی", 
               "description": "نقشه‌های نهایی تاسیسات برقی، دفترچه محاسبات", 
               "file_name": "https://drive.google.com/file/d/1T82oI72x90sClH8m7oBRUchwTkfv_1hy/view?usp=sharing" 
             }
           ]
         },
-
         {
           "section_id": "s4",
           "title": "4- برنامه زمانبندی",
-           "attachments": [
+          "attachments": [
             { 
               "title": "برنامه زمانبندی اجرا", 
               "description": "فایل برنامه زمانبندی", 
               "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
              }
           ]
-       "section_id": "s5",
+        },
+        {
+          "section_id": "s5",
           "title": "5- تمامی اسناد و براورد مناقصه",
-           "attachments": [
+          "attachments": [
             { 
               "title": "اسناد و براورد مناقصه", 
               "description": "دانلود تمامی اسناد", 
               "file_name": "https://drive.google.com/file/d/1lVHhW8t7pGJWeiNZxQXZZidNHzgEaTzM/view?usp=sharing" 
              }
           ]
+        }
+      ]
     },
     {
       "page_id": "supervision",
